@@ -56,6 +56,15 @@ class ComicController extends Controller
         return redirect() -> route('show', $comic -> id);
     }
 
+    public function destroy($id)
+    {
+        $comic = Comic::findOrFail($id);
+
+        $comic -> delete();
+
+        return redirect() -> route('home');
+    }
+
 
 
 }
