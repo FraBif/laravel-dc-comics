@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controller::class, 'index']) -> name ('home');
 Route::get('/{id}', [Controller::class, 'show']) -> name('show');
 Route::get('/create', [Controller::class, 'create']) -> name ('create');
+Route::get('/{id}/edit', [Controller::class, 'edit']) -> name ('edit');

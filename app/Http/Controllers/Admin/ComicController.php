@@ -42,4 +42,11 @@ class ComicController extends Controller
         return redirect() -> route("show", $newComic -> id);
     }
 
+    public function edit($id)
+    {
+        $comic = Comic::findOrFail($id);
+        return view('edit', compact('comic'));
+    }
+
+
 }
